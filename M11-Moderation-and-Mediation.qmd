@@ -1,0 +1,66 @@
+---
+title: "M11 Article Summary"
+subtitle: "Moderation and Mediation | IBM 6500"
+author: "Georgia Monjarrez"
+format:
+  html:
+    toc: true
+    theme: none
+    highlight-style: none
+    embed-resources: true
+    html-math-method: plain
+---
+
+<style>
+body { max-width: 760px; margin: 3rem auto; padding: 0 1.25rem; color: #202e2c; background: #fff; font: 17px/1.6 system-ui, sans-serif; }
+h1, h2 { color: #164b43; line-height: 1.2; }
+h2 { margin-top: 2rem; }
+a { color: #176557; overflow-wrap: anywhere; }
+.subtitle, .author { color: #465955; }
+nav { background: #eef5f3; padding: .35rem 1rem; border-radius: .35rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .65rem; border-bottom: 1px solid #cad9d5; }
+th { background: #eef5f3; }
+</style>
+
+## Moderation and mediation
+
+Baron and Kenny (1986) distinguish two ways a third variable can help explain a relationship. A moderator identifies the conditions under which an effect changes. A mediator represents a process through which the predictor may influence the outcome.
+
+| | Moderation | Mediation |
+|---|---|---|
+| Research question | When or for whom does the effect differ? | How or why does the effect occur? |
+| Role of the third variable | Changes the strength or direction of the relationship | Carries part or all of the effect through an indirect path |
+| Main quantity | Interaction coefficient | Indirect effect, *a × b* |
+
+## Testing moderation
+
+In a linear regression, include the predictor (*X*), moderator (*Z*), and their product (*X × Z*). The product coefficient tests whether the slope of *X* changes with *Z*. Compare the slopes directly using the interaction term. If the interaction is supported, report the estimated effect of *X* at meaningful values of *Z* (Baron & Kenny, 1986, pp. 1174–1176).
+
+## Testing mediation
+
+Baron and Kenny’s original procedure estimates three regressions (1986, pp. 1176–1178).
+
+1. Predict the mediator (*M*) from *X* to estimate path *a*.
+2. Predict the outcome (*Y*) from *X* to estimate the total effect *c*.
+3. Predict *Y* from *X* and *M* together to estimate path *b* and the direct effect *c′*.
+
+In their framework, *a*, *c*, and *b* should be supported in the expected directions, and *c′* should be smaller in magnitude than *c*. A remaining direct effect is consistent with partial mediation, and a zero direct effect corresponds to complete mediation in the model. The article also describes Sobel’s approximate test of *a × b*. The causal interpretation depends on the proposed direction from *M* to *Y*. Measurement error in *M* can weaken its estimated role.
+
+## Application to customer research
+
+Suppose I test whether a redesigned restaurant reservation page increases completed bookings.
+
+- **Moderator.** Device type could change the effect of the redesign. For example, the new layout might help mobile visitors more than desktop visitors. I would test the interaction between page version and device type.
+- **Mediator.** The redesign could increase perceived ease of booking, which could in turn increase completions. I would measure perceived ease after visitors see the page and before they decide whether to book.
+
+The article makes a similar distinction in its discussion of crowding. The option to leave a room could change how density affects crowding. Perceived control could explain how density leads people to feel crowded. A single study can test both roles by manipulating the option to leave and measuring perceived control (Baron & Kenny, 1986, pp. 1178–1180).
+
+## Reference
+
+Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. [https://doi.org/10.1037/0022-3514.51.6.1173](https://doi.org/10.1037/0022-3514.51.6.1173)
+
+## Appendix
+
+- [GitHub repository](https://github.com/gmonjarrez/m11-moderation-mediation)
+- [GitHub Pages report](https://gmonjarrez.github.io/m11-moderation-mediation/M11-Moderation-and-Mediation.html)
